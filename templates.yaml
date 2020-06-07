@@ -8,9 +8,9 @@
     tasks:
       - name: BUILD SWITCH CONFIGURATION
         template:
-          src=/etc/ansible/templates/base_{{switch_or_router}}.j2
-          dest=/etc/ansible/output/{{hostname}}.conf
+          src=/etc/ansible/Ansible-Config-Generator/templates/base_{{switch_or_router}}.j2
+          dest=/etc/ansible/Ansible-Config-Generator/output/{{hostname}}.conf
       - name: BUILD CHECKER AND INSTRUCTIONS
         template:
-          src=/etc/ansible/templates/{{hardware_type}}_instructions.j2
-          dest=/etc/ansible/output/{{hostname}}_instructions.conf
+          src=/etc/ansible/Ansible-Config-Generator/templates/{{hardware_type}}_instructions.j2
+          dest=/etc/ansible/Ansible-Config-Generator/output/{{hostname}}_instructions.conf
